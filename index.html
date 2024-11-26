@@ -1,548 +1,598 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<base href="." />
-<meta charset="UTF-8">
-<title>Ressources Pédagogiques en Physique</title>
-<style>
-:root {
-  --primary: #7c4dff;
-  --accent: #00bcd4;
-  --text: #333333;
-  --light: #ffffff;
-  --dark: #f0f0f0;
-  --gradient: linear-gradient(135deg, #7c4dff, #00bcd4);
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ressources Pédagogiques en Physique</title>
+    <style>
+        :root {
+            --primary: #7c4dff;
+            --accent: #00bcd4;
+            --text: #333333;
+            --light: #ffffff;
+            --dark: #f0f0f0;
+            --gradient: linear-gradient(135deg, #7c4dff, #00bcd4);
+        }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: var(--text);
-  background: var(--light);
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            background: var(--light);
+        }
 
-.hero {
-  background: linear-gradient(135deg, #ffffff, #e0e0e0);
-  color: var(--text);
-  padding: 2rem 1.5rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+        .hero {
+            background: linear-gradient(135deg, #ffffff, #e0e0e0);
+            color: var(--text);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-.td-series-submenu a:hover {
-  background-color: rgba(124, 77, 255, 0.1);
-  color: var(--accent);
-  text-shadow: 0 0 5px rgba(0, 188, 212, 0.5), 0 0 10px rgba(0, 188, 212, 0.5);
-}
+        .td-series-submenu a:hover {
+            background-color: rgba(124, 77, 255, 0.1);
+            color: var(--accent);
+            text-shadow: 0 0 5px rgba(0, 188, 212, 0.5), 0 0 10px rgba(0, 188, 212, 0.5);
+        }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='50' cy='50' rx='45' ry='20' fill='none' stroke='rgba(0,0,0,0.1)' stroke-width='2' transform='rotate(0 50 50)'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 50 50' to='360 50 50' dur='10s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='50' cy='50' rx='45' ry='20' fill='none' stroke='rgba(0,0,0,0.1)' stroke-width='2' transform='rotate(60 50 50)'%3E%3CanimateTransform attributeName='transform' type='rotate' from='60 50 50' to='420 50 50' dur='10s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Ccircle cx='50' cy='50' r='4' fill='rgba(0,0,0,0.2)'/%3E%3C/svg%3E");
-  opacity: 0.2;
-}
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='50' cy='50' rx='45' ry='20' fill='none' stroke='rgba(0,0,0,0.1)' stroke-width='2' transform='rotate(0 50 50)'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 50 50' to='360 50 50' dur='10s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Cellipse cx='50' cy='50' rx='45' ry='20' fill='none' stroke='rgba(0,0,0,0.1)' stroke-width='2' transform='rotate(60 50 50)'%3E%3CanimateTransform attributeName='transform' type='rotate' from='60 50 50' to='420 50 50' dur='10s' repeatCount='indefinite'/%3E%3C/ellipse%3E%3Ccircle cx='50' cy='50' r='4' fill='rgba(0,0,0,0.2)'/%3E%3C/svg%3E");
+            opacity: 0.2;
+        }
 
-.line1 {
-  color: var(--text);
-  font-size: 2.2rem;
-  display: block;
-  margin-bottom: 0.5rem;
-}
+        .line1 {
+            color: var(--text);
+            font-size: 2.2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
 
-.line2 {
-  color: var(--primary);
-  font-size: 1.8rem;
-  display: block;
-  margin-bottom: 0.5rem;
-}
+        .line2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
 
-.line3 {
-  color: var(--accent);
-  font-size: 1.6rem;
-  display: block;
-}
+        .line3 {
+            color: var(--accent);
+            font-size: 1.6rem;
+            display: block;
+        }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
 
-.card {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(20px);
-  border-radius: 25px;
-  padding: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  color: var(--text);
-}
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: var(--text);
+        }
 
-.card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
 
-.card svg {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 1.5rem;
-  fill: var(--accent);
-  transition: all 0.4s ease;
-  filter: drop-shadow(0 0 5px rgba(124, 77, 255, 0.3));
-}
+        .card svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1.5rem;
+            fill: var(--accent);
+            transition: all 0.4s ease;
+            filter: drop-shadow(0 0 5px rgba(124, 77, 255, 0.3));
+        }
 
-.btn {
-  background: var(--gradient);
-  border: none;
-  padding: 1rem 2rem;
-  color: white;
-  border-radius: 50px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-}
+        .btn {
+            background: var(--gradient);
+            border: none;
+            padding: 1rem 2rem;
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(124, 77, 255, 0.3);
-}
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(124, 77, 255, 0.3);
+        }
 
-.td-content {
-  margin-top: 1rem;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-}
+        .td-content {
+            margin-top: 1rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
 
-.td-content.active {
-  max-height: 500px; /* Adjust this value as needed */
-}
+        .td-content.active {
+            max-height: 500px; /* Adjust this value as needed */
+        }
 
-.td-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+        .td-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.td-series-group {
-  position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
+        .td-series-group {
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
 
-.td-series-group > .td-link {
-  padding: 12px 15px;
-  display: block;
-  color: var(--text);
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
+        .td-series-group > .td-link {
+            padding: 12px 15px;
+            display: block;
+            color: var(--text);
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
 
-.td-series-group > .td-link:hover {
-  background-color: rgba(124, 77, 255, 0.1);
-}
+        .td-series-group > .td-link:hover {
+            background-color: rgba(124, 77, 255, 0.1);
+        }
 
-.td-series-submenu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  background: rgba(240, 240, 240, 0.95);
-}
+        .td-series-submenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: rgba(240, 240, 240, 0.95);
+        }
 
-.td-series-group.active .td-series-submenu {
-  max-height: 200px;
-}
+        .td-series-group.active .td-series-submenu {
+            max-height: 200px;
+        }
 
-.td-series-submenu a {
-  padding: 10px 25px;
-  display: block;
-  color: var(--text);
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
+        .td-series-submenu a {
+            padding: 10px 25px;
+            display: block;
+            color: var(--text);
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
 
-.td-series-submenu a:hover {
-  background-color: rgba(124, 77, 255, 0.1);
-}
+        .td-series-submenu a:hover {
+            background-color: rgba(124, 77, 255, 0.1);
+        }
 
-.td-series-toggle {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.3s;
-}
+        .td-series-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
 
-.td-series-group.active .td-series-toggle {
-  transform: translateY(-50%) rotate(180deg);
-}
+        .td-series-group.active .td-series-toggle {
+            transform: translateY(-50%) rotate(180deg);
+        }
 
-.td-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.8rem;
-  margin: 0;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
+        .td-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem;
+            margin: 0;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
 
-.td-item:hover {
-  background-color: rgba(124, 77, 255, 0.1);
-}
+        .td-item:hover {
+            background-color: rgba(124, 77, 255, 0.1);
+        }
 
-.pdf-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 0.5rem;
-  fill: var(--accent);
-}
+        .pdf-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 0.5rem;
+            fill: var(--accent);
+        }
 
-.image-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 4rem;
-}
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
 
-.image-card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+        .image-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
 
-.image-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
 
-.image-card:hover img {
-  transform: scale(1.05);
-}
+        .image-card:hover img {
+            transform: scale(1.05);
+        }
 
-.image-caption {
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--text);
-}
+        .image-caption {
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text);
+        }
 
-@keyframes floatParticle {
-  0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(10px, -10px); }
-  50% { transform: translate(-5px, -15px); }
-  75% { transform: translate(-10px, -5px); }
-}
+        @keyframes floatParticle {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(10px, -10px); }
+            50% { transform: translate(-5px, -15px); }
+            75% { transform: translate(-10px, -5px); }
+        }
 
-.particles circle {
-  animation: floatParticle 8s ease-in-out infinite;
-}
+        .particles circle {
+            animation: floatParticle 8s ease-in-out infinite;
+        }
 
-.particles {
-  height: 100px;
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.3;
-}
+        .particles {
+            height: 100px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.3;
+        }
 
-.hero h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 2.2rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
+        .hero h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 2.2rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
 
-.hero p {
-  font-size: 0.9rem;
-  margin-top: 0.3rem;
-  margin-bottom: 0;
-}
-.td-series-group .td-series-submenu a {
-  color: var(--text); /* Applique uniquement aux TP */
-}
+        .hero p {
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+            margin-bottom: 0;
+        }
+        .td-series-group .td-series-submenu a {
+            color: var(--text); /* Applique uniquement aux TP */
+        }
 
-/* Nouvelle classe pour les liens dans la rubrique "Accéder aux TP" */
-.tp-link {
-  color: var(--accent); /* Couleur plus claire pour les liens */
-}
+        /* Nouvelle classe pour les liens dans la rubrique "Accéder aux TP" */
+        .tp-link {
+            color: var(--accent); /* Couleur plus claire pour les liens */
+        }
 
-</style>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        .blue-band {
+            width: 100%;
+            height: 10px;
+            background-color: #00bcd4;
+            margin: 10px 0;
+        }
+
+        .access-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .access-form input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .access-form button {
+            padding: 10px 20px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .access-form button:hover {
+            background-color: var(--accent);
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<div class="hero">
-  <svg class="particles" viewBox="0 0 200 200">
-    <circle cx="20" cy="50" r="3" fill="black">
-      <animate attributeName="cy" values="50;30;50" dur="3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="40" cy="70" r="2" fill="black">
-      <animate attributeName="cy" values="70;40;70" dur="4s" repeatCount="indefinite"/>
-    </circle>
-  </svg>
-
-  <h1>
-    <span class="line1">Ressources Pédagogiques</span>
-    <span class="line2">en Physique Subatomique</span>
-    <span class="line3">Pr. A. Elanique, Départ. de Physique, FSA, Agadir</span>
-  </h1>
-  <p>Ce site web est destiné aux étudiants en Sciences Physiques pour les aider à explorer, comprendre et maîtriser les concepts essentiels de la physique subatomique.</p>
-</div>
-
-<div class="container">
-  <div class="grid">
-    <div class="card">
-      <svg viewBox="0 0 24 24" fill="var(--accent)">
-        <path d="M12 3L1 9l11 6l11-6L12 3z M1 9v6l11 6l11-6V9"/>
-      </svg>
-      <h2>Cours</h2>
-      <p>Accédez aux supports de cours, présentations et notes théoriques.</p>
-      <a href="javascript:void(0)" class="btn" onclick="toggleContent('cours-content')">Voir les Cours</a>
-
-      <div id="cours-content" class="td-content">
-        <ul class="td-list">
-          <li class="td-series-group">
-            <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
-              Ch. Génér.+EnergieLiaison
-              <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 10l5 5 5-5z"/>
-              </svg>
-            </a>
-            <div class="td-series-submenu">
-              <a href="https://drive.google.com/file/d/12z9yiH_BFRi5hoXNgkWks6UFhzxt386G/view?usp=drive_link" target="_blank">Cours</a>
-              <a href="https://drive.google.com/file/d/1UWFLNb0TC2aRtAcqOlXNvLcpad0pE8Pi/view?usp=drive_link" target="_blank">Présentation</a>
-            </div>
-          </li>
-          <li class="td-series-group">
-            <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
-              Ch. Radioactivité
-              <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 10l5 5 5-5z"/>
-              </svg>
-            </a>
-            <div class="td-series-submenu">
-              <a href="https://drive.google.com/file/d/1z7AdiEQb7AhGibb9Ur3KB8MTETwT-gI5/view?usp=sharing" target="_blank">Cours</a>
-              <a href="https://drive.google.com/file/d/1Vq_rLsQH6y9uR_4nt51zCnMmsN2N5dYD/view?usp=drive_link" target="_blank">Présentation</a>
-            </div>
-          </li>
-          <li class="td-series-group">
-            <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
-              Ch. Réactions Nucléaires
-              <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 10l5 5 5-5z"/>
-              </svg>
-            </a>
-            <div class="td-series-submenu">
-              <a href="https://drive.google.com/file/d/1nRCGQ1FwEQw21fWep46izYzkDslrOQkv/view?usp=drive_link" target="_blank">Cours</a>
-              <a href="https://drive.google.com/file/d/1rkGZ_XETIo1puVzHsJ4TPXCJy2da2BPV/view?usp=drive_link" target="_blank">Présentation</a>
-            </div>
-          </li>
-          <li class="td-series-group">
-            <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
-              Ch. Exp. Rutherford
-              <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 10l5 5 5-5z"/>
-              </svg>
-            </a>
-            <div class="td-series-submenu">
-              <a href="https://drive.google.com/file/d/1RsgcbCkzl5bMi41U5pLsI1n-vpwVRfyK/view?usp=drive_link" target="_blank">Cours</a>
-              <a href="https://drive.google.com/file/d/18BHv15zPLITzpBpMlSvB4wHmGMy_urjQ/view?usp=drive_link" target="_blank">Présentation</a>
-            </div>
-          </li>
-        </ul>
-      </div>
+    <div class="hero">
+        <div class="blue-band"></div>
+        <h1>
+            <span class="line1">Ressources Pédagogiques</span>
+            <span class="line2">en Physique Subatomique</span>
+            <span class="line3">Pr. A. Elanique</span>
+        </h1>
+        <div class="blue-band"></div>
+        <p>Ce site est destiné aux étudiants en Sciences Physiques pour les aider à explorer, comprendre et maîtriser les concepts de la physique subatomique.</p>
     </div>
-
-    <div class="card">
-      <svg viewBox="0 0 24 24" fill="var(--accent)">
-        <path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/>
-      </svg>
-      <h2>Travaux Dirigés</h2>
-      <p>Exercices pratiques et problèmes pour approfondir vos connaissances.</p>
-      <a href="javascript:void(0)" class="btn" onclick="toggleContent('td-content')">Accéder aux TD</a>
-
-      <div id="td-content" class="td-content">
-        <ul class="td-list">
-          <li class="td-series-group">
-            <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
-              Série TD 1 Généralitées
-              <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 10l5 5 5-5z"/>
-              </svg>
-            </a>
-            <div class="td-series-submenu">
-              <a href="https://drive.google.com/file/d/1atG-0EhfmwGNhLjbKxvyYK2B119uAzVn/view?usp=sharing" target="_blank">Énoncé-TD1</a>
-              <a href="https://drive.google.com/file/d/1q6qvTjTvrcmW-YKJyfJWxi3fsVrQwwMX/view?usp=drive_link" target="_blank">Corrigé-TD1</a>
-            </div>
-          </li>
-          <li class="td-series-group">
-            <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
-              Série TD 2 Energie de liaison
-              <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 10l5 5 5-5z"/>
-              </svg>
-            </a>
-            <div class="td-series-submenu">
-              <a href="https://drive.google.com/file/d/1_FnOMDGQH7fGCoULDZyQR_BuHRPhxWUT/view?usp=drive_link" target="_blank">Énoncé-TD2</a>
-              <a href="https://drive.google.com/file/d/1-ThR2kaMyrECmJvovuH6LVGnPaeJ8-P8/view?usp=drive_link" target="_blank">Corrigé-TD2</a>
-            </div>
-          </li>
-          <li class="td-series-group">
-            <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
-              Série TD 3 Radioactivité
-              <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 10l5 5 5-5z"/>
-              </svg>
-            </a>
-            <div class="td-series-submenu">
-              <a href="https://drive.google.com/file/d/1EcQ3pK-svXSZkmkBj_RphDnU4YQChjyM/view?usp=drive_link" target="_blank">Énoncé-TD3</a>
-              <a href="https://drive.google.com/file/d/1eAl4d2RfekF4O5aUBzz-aaACndRFxyUg/view?usp=drive_link" target="_blank">Corrigé-TD3</a>
-            </div>
-          </li>
-          <li class="td-series-group">
-            <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
-              Série TD 4 Réactions Nucléaires
-              <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 10l5 5 5-5z"/>
-              </svg>
-            </a>
-            <div class="td-series-submenu">
-              <a href="https://drive.google.com/file/d/1tFbhq4PtEDF6sVP4S0Eure3ZZpL-sHt2/view?usp=drive_link" target="_blank">Énoncé-TD4</a>
-              <a href="https://drive.google.com/file/d/1PyztsS50yqy2sFIIRyKyM4VkuP9FlcgH/view?usp=drive_link" target="_blank">Corrigé-TD4</a>
-            </div>
-          </li>
-        </ul>
-      </div>
+    <div class="access-form">
+        <input type="password" id="accessKey" placeholder="Entrez la clé à 4 chiffres" maxlength="4">
+        <button onclick="checkAccessKey()">Accéder</button>
+        <div id="errorMessage" class="error-message"></div>
     </div>
-
-    <div class="card">
-  <svg viewBox="0 0 24 24" fill="var(--accent)">
-    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-  </svg>
-  <h2>Travaux Pratiques</h2>
-  <p>Protocoles expérimentaux et guides de laboratoire.</p>
-  <a href="javascript:void(0)" class="btn" onclick="toggleContent('tp-content')">Accéder aux TP</a>
-
-  <div id="tp-content" class="td-content">
-    <ul class="td-list">
-      <li class="td-series-group">
-        <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
-          Manipulations TP
-          <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M7 10l5 5 5-5z"/>
-          </svg>
-        </a>
-        <div class="td-series-submenu">
-          <a href="https://drive.google.com/file/d/17WVOjbWiO_hMDyXhN0L87AVAcVHLdoVZ/view?usp=drive_link" class="tp-link" target="_blank">Manip. 1 : NucleusWin</a>
-          <a href="https://drive.google.com/file/d/1PY_kDzktGIPjZ5XcQ67HaGkMzXCiCb7w/view?usp=drive_link" class="tp-link" target="_blank">Manip. 2 : Charge(e/m)</a>
-          <a href="https://drive.google.com/file/d/17qfcP6Kwxk106T0tLFtwv26XcUjbkvu5/view?usp=drive_link" class="tp-link" target="_blank">Manip. 3 : Exp_Rutherford</a>
+    <div id="content" class="content">
+        <div class="container">
+            <div class="grid">
+                <div class="card">
+                    <svg viewBox="0 0 24 24" fill="var(--accent)">
+                        <path d="M12 3L1 9l11 6l11-6L12 3z M1 9v6l11 6l11-6V9"/>
+                    </svg>
+                    <h2>Cours</h2>
+                    <p>Accédez aux supports de cours, présentations et notes théoriques.</p>
+                    <a href="javascript:void(0)" class="btn" onclick="toggleContent('cours-content')">Voir les Cours</a>
+                    <div id="cours-content" class="td-content">
+                        <ul class="td-list">
+                            <li class="td-series-group">
+                                <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
+                                    Ch. Génér.+EnergieLiaison
+                                    <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 10l5 5 5-5z"/>
+                                    </svg>
+                                </a>
+                                <div class="td-series-submenu">
+                                    <a href="https://drive.google.com/file/d/12z9yiH_BFRi5hoXNgkWks6UFhzxt386G/view?usp=drive_link" target="_blank">Cours</a>
+                                    <a href="https://drive.google.com/file/d/1UWFLNb0TC2aRtAcqOlXNvLcpad0pE8Pi/view?usp=drive_link" target="_blank">Présentation</a>
+                                </div>
+                            </li>
+                            <li class="td-series-group">
+                                <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
+                                    Ch. Radioactivité
+                                    <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 10l5 5 5-5z"/>
+                                    </svg>
+                                </a>
+                                <div class="td-series-submenu">
+                                    <a href="https://drive.google.com/file/d/1z7AdiEQb7AhGibb9Ur3KB8MTETwT-gI5/view?usp=sharing" target="_blank">Cours</a>
+                                    <a href="https://drive.google.com/file/d/1Vq_rLsQH6y9uR_4nt51zCnMmsN2N5dYD/view?usp=drive_link" target="_blank">Présentation</a>
+                                </div>
+                            </li>
+                            <li class="td-series-group">
+                                <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
+                                    Ch. Réactions Nucléaires
+                                    <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 10l5 5 5-5z"/>
+                                    </svg>
+                                </a>
+                                <div class="td-series-submenu">
+                                    <a href="https://drive.google.com/file/d/1nRCGQ1FwEQw21fWep46izYzkDslrOQkv/view?usp=drive_link" target="_blank">Cours</a>
+                                    <a href="https://drive.google.com/file/d/1rkGZ_XETIo1puVzHsJ4TPXCJy2da2BPV/view?usp=drive_link" target="_blank">Présentation</a>
+                                </div>
+                            </li>
+                            <li class="td-series-group">
+                                <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
+                                    Ch. Exp. Rutherford
+                                    <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 10l5 5 5-5z"/>
+                                    </svg>
+                                </a>
+                                <div class="td-series-submenu">
+                                    <a href="https://drive.google.com/file/d/1RsgcbCkzl5bMi41U5pLsI1n-vpwVRfyK/view?usp=drive_link" target="_blank">Cours</a>
+                                    <a href="https://drive.google.com/file/d/18BHv15zPLITzpBpMlSvB4wHmGMy_urjQ/view?usp=drive_link" target="_blank">Présentation</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <svg viewBox="0 0 24 24" fill="var(--accent)">
+                        <path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/>
+                    </svg>
+                    <h2>Travaux Dirigés</h2>
+                    <p>Exercices pratiques et problèmes pour approfondir vos connaissances.</p>
+                    <a href="javascript:void(0)" class="btn" onclick="toggleContent('td-content')">Accéder aux TD</a>
+                    <div id="td-content" class="td-content">
+                        <ul class="td-list">
+                            <li class="td-series-group">
+                                <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
+                                    Série TD 1 Généralitées
+                                    <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 10l5 5 5-5z"/>
+                                    </svg>
+                                </a>
+                                <div class="td-series-submenu">
+                                    <a href="https://drive.google.com/file/d/1atG-0EhfmwGNhLjbKxvyYK2B119uAzVn/view?usp=sharing" target="_blank">Énoncé-TD1</a>
+                                    <a href="https://drive.google.com/file/d/1q6qvTjTvrcmW-YKJyfJWxi3fsVrQwwMX/view?usp=drive_link" target="_blank">Corrigé-TD1</a>
+                                </div>
+                            </li>
+                            <li class="td-series-group">
+                                <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
+                                    Série TD 2 Energie de liaison
+                                    <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 10l5 5 5-5z"/>
+                                    </svg>
+                                </a>
+                                <div class="td-series-submenu">
+                                    <a href="https://drive.google.com/file/d/1_FnOMDGQH7fGCoULDZyQR_BuHRPhxWUT/view?usp=drive_link" target="_blank">Énoncé-TD2</a>
+                                    <a href="https://drive.google.com/file/d/1-ThR2kaMyrECmJvovuH6LVGnPaeJ8-P8/view?usp=drive_link" target="_blank">Corrigé-TD2</a>
+                                </div>
+                            </li>
+                            <li class="td-series-group">
+                                <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
+                                    Série TD 3 Radioactivité
+                                    <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 10l5 5 5-5z"/>
+                                    </svg>
+                                </a>
+                                <div class="td-series-submenu">
+                                    <a href="https://drive.google.com/file/d/1EcQ3pK-svXSZkmkBj_RphDnU4YQChjyM/view?usp=drive_link" target="_blank">Énoncé-TD3</a>
+                                    <a href="https://drive.google.com/file/d/1eAl4d2RfekF4O5aUBzz-aaACndRFxyUg/view?usp=drive_link" target="_blank">Corrigé-TD3</a>
+                                </div>
+                            </li>
+                            <li class="td-series-group">
+                                <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
+                                    Série TD 4 Réactions Nucléaires
+                                    <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 10l5 5 5-5z"/>
+                                    </svg>
+                                </a>
+                                <div class="td-series-submenu">
+                                    <a href="https://drive.google.com/file/d/1tFbhq4PtEDF6sVP4S0Eure3ZZpL-sHt2/view?usp=drive_link" target="_blank">Énoncé-TD4</a>
+                                    <a href="https://drive.google.com/file/d/1PyztsS50yqy2sFIIRyKyM4VkuP9FlcgH/view?usp=drive_link" target="_blank">Corrigé-TD4</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <svg viewBox="0 0 24 24" fill="var(--accent)">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                    </svg>
+                    <h2>Travaux Pratiques</h2>
+                    <p>Protocoles expérimentaux et guides de laboratoire.</p>
+                    <a href="javascript:void(0)" class="btn" onclick="toggleContent('tp-content')">Accéder aux TP</a>
+                    <div id="tp-content" class="td-content">
+                        <ul class="td-list">
+                            <li class="td-series-group">
+                                <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
+                                    Manipulations TP
+                                    <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 10l5 5 5-5z"/>
+                                    </svg>
+                                </a>
+                                <div class="td-series-submenu">
+                                    <a href="https://drive.google.com/file/d/17WVOjbWiO_hMDyXhN0L87AVAcVHLdoVZ/view?usp=drive_link" class="tp-link" target="_blank">Manip. 1 : NucleusWin</a>
+                                    <a href="https://drive.google.com/file/d/1PY_kDzktGIPjZ5XcQ67HaGkMzXCiCb7w/view?usp=drive_link" class="tp-link" target="_blank">Manip. 2 : Charge(e/m)</a>
+                                    <a href="https://drive.google.com/file/d/17qfcP6Kwxk106T0tLFtwv26XcUjbkvu5/view?usp=drive_link" class="tp-link" target="_blank">Manip. 3 : Exp_Rutherford</a>
+                                </div>
+                            </li>
+                            <li class="td-series-group">
+                                <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
+                                    Annexes
+                                    <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 10l5 5 5-5z"/>
+                                    </svg>
+                                </a>
+                                <div class="td-series-submenu">
+                                    <a href="https://drive.google.com/file/d/1zaGlKik_Rbk4qFwXDKcONRysP67rphll/view?usp=drive_link" class="tp-link" target="_blank">Dét.Rayonnement</a>
+                                    <a href="https://drive.google.com/file/d/1Y87JH0Dnzbp0UwFBM2SDu3JfK93epeHE/view?usp=drive_link" class="tp-link" target="_blank">Script_Octave/Matlab</a>
+                                    <a href="https://drive.google.com/file/d/14gX8A9Bwzm4jwWm58ZnDAMdF6ZE1Vq5_/view?usp=drive_link" class="tp-link" target="_blank">Guide_OctaveOnline</a>
+                                </div>
+                            </li>
+                            <li class="td-series-group">
+                                <div class="td-series-submenu">
+                                    <a href="https://drive.google.com/file/d/1Annexe3_link/view?usp=sharing" class="tp-link" target="_blank">Guide Octave</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </li>
-      <li class="td-series-group">
-        <a href="javascript:void(0)" class="td-link" onclick="toggleSeriesMenu(this)">
-          Annexes
-          <svg class="td-series-toggle" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M7 10l5 5 5-5z"/>
-          </svg>
-        </a>
-        <div class="td-series-submenu">
-          <a href="https://drive.google.com/file/d/1zaGlKik_Rbk4qFwXDKcONRysP67rphll/view?usp=drive_link" class="tp-link" target="_blank">Dét.Rayonnement</a>
-          <a href="https://drive.google.com/file/d/1Y87JH0Dnzbp0UwFBM2SDu3JfK93epeHE/view?usp=drive_link" class="tp-link" target="_blank">Script_Octave/Matlab</a>
-          <a href="https://drive.google.com/file/d/14gX8A9Bwzm4jwWm58ZnDAMdF6ZE1Vq5_/view?usp=drive_link" class="tp-link" target="_blank">Guide_OctaveOnline</a>
-        </div>
-      </li>
-      <li class="td-series-group">
-          <div class="td-series-submenu">
-            <a href="https://drive.google.com/file/d/1Annexe3_link/view?usp=sharing" class="tp-link" target="_blank">Guide Octave</a>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
+    </div>
+    <script>
+        const correctKey = "2425"; // Remplacez par la clé correcte
 
-  </div>
-</div>
+        function checkAccessKey() {
+            const enteredKey = document.getElementById('accessKey').value;
+            const errorMessage = document.getElementById('errorMessage');
+            const content = document.getElementById('content');
 
-<script>
-function toggleContent(contentId) {
-  const content = document.getElementById(contentId);
-  content.classList.toggle('active');
-}
+            if (enteredKey === correctKey) {
+                errorMessage.textContent = "";
+                content.classList.add('active');
+            } else {
+                errorMessage.textContent = "Clé incorrecte. Veuillez réessayer.";
+            }
+        }
 
-function toggleSeriesMenu(element) {
-  const seriesGroup = element.closest('.td-series-group');
+        function toggleContent(contentId) {
+            const content = document.getElementById(contentId);
+            content.classList.toggle('active');
+        }
 
-  // Close other open menus
-  document.querySelectorAll('.td-series-group.active').forEach(group => {
-    if (group !== seriesGroup) {
-      group.classList.remove('active');
-    }
-  });
+        function toggleSeriesMenu(element) {
+            const seriesGroup = element.closest('.td-series-group');
 
-  seriesGroup.classList.toggle('active');
-}
+            // Close other open menus
+            document.querySelectorAll('.td-series-group.active').forEach(group => {
+                if (group !== seriesGroup) {
+                    group.classList.remove('active');
+                }
+            });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.card');
+            seriesGroup.classList.toggle('active');
+        }
 
-  cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
 
-      card.style.setProperty('--mouse-x', `${x}px`);
-      card.style.setProperty('--mouse-y', `${y}px`);
-    });
-  });
-});
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
 
-function createParticles() {
-  const hero = document.querySelector('.hero');
-  for(let i = 0; i < 20; i++) {
-    const particle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-    particle.setAttribute('r', Math.random() * 2 + 1);
-    particle.setAttribute('cx', Math.random() * 200);
-    particle.setAttribute('cy', Math.random() * 200);
-    particle.setAttribute('fill', 'rgba(0,0,0,0.5)');
-    document.querySelector('.particles').appendChild(particle);
-  }
-}
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                });
+            });
+        });
 
-window.addEventListener('load', createParticles);
-</script>
+        function createParticles() {
+            const hero = document.querySelector('.hero');
+            for(let i = 0; i < 20; i++) {
+                const particle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                particle.setAttribute('r', Math.random() * 2 + 1);
+                particle.setAttribute('cx', Math.random() * 200);
+                particle.setAttribute('cy', Math.random() * 200);
+                particle.setAttribute('fill', 'rgba(0,0,0,0.5)');
+                document.querySelector('.particles').appendChild(particle);
+            }
+        }
 
+        window.addEventListener('load', createParticles);
+    </script>
 </body>
 </html>
