@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ressources Pédagogiques en Physique</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         :root {
             --primary: #7c4dff;
@@ -28,16 +27,13 @@
             color: var(--text);
             padding: 1rem 1.5rem;
             text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
+            position: relative;
+            overflow: hidden;
+            height: 150px; /* Hauteur réduite à 50% */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 150px; /* Hauteur réduite à 50% */
         }
 
         .td-series-submenu a:hover {
