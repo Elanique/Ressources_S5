@@ -25,11 +25,11 @@
         .hero {
             background: linear-gradient(135deg, #ffffff, #e0e0e0);
             color: var(--text);
-            padding: 2rem 1.5rem;
+            padding: 1rem 1.5rem;
             text-align: center;
             position: relative;
             overflow: hidden;
-            min-height: 300px;
+            height: 150px; /* Hauteur réduite à 50% */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -55,22 +55,23 @@
 
         .line1 {
             color: var(--text);
-            font-size: 2.2rem;
+            font-size: 1.6rem;
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.2rem;
         }
 
         .line2 {
             color: var(--primary);
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.2rem;
         }
 
         .line3 {
             color: var(--accent);
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             display: block;
+            margin-bottom: 0.5rem;
         }
 
         .container {
@@ -102,13 +103,23 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
-        .card svg {
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-header svg {
             width: 48px;
             height: 48px;
-            margin-bottom: 1.5rem;
+            margin-right: 1rem;
             fill: var(--accent);
             transition: all 0.4s ease;
             filter: drop-shadow(0 0 5px rgba(124, 77, 255, 0.3));
+        }
+
+        .card-header h2 {
+            margin: 0;
         }
 
         .btn {
@@ -278,9 +289,9 @@
         .hero h1 {
             margin: 0;
             padding: 0;
-            font-size: 2.2rem;
+            font-size: 1.6rem;
             line-height: 1.2;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .hero p {
@@ -301,7 +312,7 @@
             width: 100%;
             height: 10px;
             background-color: #00bcd4;
-            margin: 10px 0;
+            margin: 5px 0;
         }
 
         .access-form {
@@ -309,6 +320,7 @@
             flex-direction: column;
             align-items: center;
             margin-bottom: 20px;
+            margin-top: 160px; /* Ajustez cette valeur si nécessaire */
         }
 
         .access-form input {
@@ -366,10 +378,12 @@
         <div class="container">
             <div class="grid">
                 <div class="card">
-                    <svg viewBox="0 0 24 24" fill="var(--accent)">
-                        <path d="M12 3L1 9l11 6l11-6L12 3z M1 9v6l11 6l11-6V9"/>
-                    </svg>
-                    <h2>Cours</h2>
+                    <div class="card-header">
+                        <svg viewBox="0 0 24 24" fill="var(--accent)">
+                            <path d="M12 3L1 9l11 6l11-6L12 3z M1 9v6l11 6l11-6V9"/>
+                        </svg>
+                        <h2>Cours</h2>
+                    </div>
                     <p>Accédez aux supports de cours, présentations et notes théoriques.</p>
                     <a href="javascript:void(0)" class="btn" onclick="toggleContent('cours-content')">Voir les Cours</a>
                     <div id="cours-content" class="td-content">
@@ -426,10 +440,12 @@
                     </div>
                 </div>
                 <div class="card">
-                    <svg viewBox="0 0 24 24" fill="var(--accent)">
-                        <path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/>
-                    </svg>
-                    <h2>Travaux Dirigés</h2>
+                    <div class="card-header">
+                        <svg viewBox="0 0 24 24" fill="var(--accent)">
+                            <path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/>
+                        </svg>
+                        <h2>Travaux Dirigés</h2>
+                    </div>
                     <p>Exercices pratiques et problèmes pour approfondir vos connaissances.</p>
                     <a href="javascript:void(0)" class="btn" onclick="toggleContent('td-content')">Accéder aux TD</a>
                     <div id="td-content" class="td-content">
@@ -486,11 +502,13 @@
                     </div>
                 </div>
                 <div class="card">
-                    <svg viewBox="0 0 24 24" fill="var(--accent)">
-                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                    </svg>
-                    <h2>Travaux Pratiques</h2>
-                    <p>Manipulations de TP et Docs annexes</p>
+                    <div class="card-header">
+                        <svg viewBox="0 0 24 24" fill="var(--accent)">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                        </svg>
+                        <h2>Travaux Pratiques</h2>
+                    </div>
+                    <p>Protocoles expérimentaux et guides de laboratoire.</p>
                     <a href="javascript:void(0)" class="btn" onclick="toggleContent('tp-content')">Accéder aux TP</a>
                     <div id="tp-content" class="td-content">
                         <ul class="td-list">
